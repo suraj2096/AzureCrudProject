@@ -1,0 +1,64 @@
+<div class="container">
+<div class="W-75 m-auto">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">File Name</th>
+            <th scope="col">File Extension</th>
+            <th scope="col">Posted Date</th>
+            <th scope="col">Download</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of GetData">
+            <td>{{data.imageName}}</td>
+            <td>{{data.imageExtension}}</td>
+            <td>{{data.fileCreated}}</td>
+            <td><button class="btn btn-info" (click)="downloadImage(data.imageName,data.imageExtension)">Download</button></td>
+            <td>
+              <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#editModal" (click)="editButton(data)" >Edit </button>
+              <button class="btn btn-danger" (click)="deleteData(data)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>
+
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <form class="form"> 
+        <div class="row mt-2">
+        <div class="col-6">
+        <label>Enter a File Name</label>
+        </div>
+        <div class="col-6">
+        <input [(ngModel)]="updateData.ImageName" name="ImageName" type="text" placeholder="enter the name of file" class="form-control"/>
+        </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-6">
+          <label>Enter a File Extension</label>
+          </div>
+          <div class="col-6">
+          <input [(ngModel)]="updateData.ImageExtension" name="ImageExtension" type="text" placeholder="enter the extension of file" class="form-control"/>
+          </div>
+          </div>
+       </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="updateButton()" data-bs-dismiss="modal" >Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+

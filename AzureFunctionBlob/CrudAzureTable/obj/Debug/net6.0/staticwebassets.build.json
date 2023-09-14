@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SFRcM+gqBhy1/+9wnGhKFzPVYwZg2XXG4e25NgNtTGY=",
+  "Source": "CrudAzureTable",
+  "BasePath": "_content/CrudAzureTable",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

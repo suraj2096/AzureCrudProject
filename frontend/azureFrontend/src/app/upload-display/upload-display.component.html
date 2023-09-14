@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="w-50 m-auto border" tabindex="">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header p-2 border">
+            <h5 class="modal-title">Upload Data</h5>
+          </div>
+          <div class="modal-body mt-3">
+            <div class="text-center">
+              <Label for="file"><img src="assets/images/imageUpload.webp" width="80rem"></Label>
+              <input  id="file"  (change)="setImage($event)" name="image" type="file" style="display: none;">
+              </div>
+          </div>
+          <div class="modal-footer  mt-3">
+            <button type="button" class="btn btn-primary" (click)="uploadImage()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CrudAzureTable.props" />
+</Project>

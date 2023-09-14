@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row p-5">
+      <div class="col-3  offset-3 " style="text-align: right;">
+    <button class="btn btn-info " (click)="uploadShow()">Upload</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-success" (click)="displayShow()">Display</button>
+  </div>
+    </div>
+  </div>
+
+
+  <app-upload-display *ngIf="DisplayUpload"></app-upload-display>
+
+
+  <app-data-display *ngIf="FirstLoad"></app-data-display>

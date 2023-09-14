@@ -1,0 +1,61 @@
+<div class="bg-info " style="position: relative;min-height: 49vw;" >
+    <!-- <div class="alert alert-danger w-100" role="alert" style="position: absolute;"*ngIf="DisplaySuccess==true && DisplayName=='danger'" >
+    {{DisplayMessage}}
+    </div>
+    <div class="alert alert-success w-100" role="alert" style="position: absolute;"*ngIf='DisplaySuccess==true && DisplayName=="success"'>
+      {{DisplayMessage}}
+    </div>   -->
+    <div class="d-flex justify-content-center align-items-center w-100 " style="position: absolute;top: 15vw;" >
+    <div class="card  mh-100" style="width: 35vw;">
+        <div class="card-header text-center bg-success text-white text-uppercase font-weight-bold">
+          Login
+        </div>
+        <div class="card-body">
+            <form >
+             <div class="row col-12">
+                <div class="col-4">
+                  <label for="userName" class="text-bold">UserName</label>
+                </div>
+                <div class="col-8">    
+                  <!-- <input class="form-control" type="text" placeholder="Enter your UserName" id="userName" [(ngModel)]="LoginUserData.UserName" name="UserName" required minlength="4" #name="ngModel"/> -->
+                  <!-- this is also the template driven forms validataion  -->
+                <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)">
+                    <div *ngIf="name.errors?.['required']">
+                  <span class="text-danger">Name is Required</span>
+                </div>
+                <div *ngIf="name.errors?.['minlength']">
+                  <span class="text-danger">Name is 3 characters long</span>
+                </div>
+              </div> -->
+              <input class="form-control" type="text" placeholder="Enter your UserName" id="userName"  [(ngModel)]="loginData.UserName" name="UserName"  required minlength="4"/>
+              <!-- <div *ngIf="LoginUserData.hasError('required','name')"> -->
+                
+                  <!-- <div *ngIf="LoginUserData.hasError('minlength','name')"> -->
+                    
+                </div>
+             </div>
+             <div class="row col-12 mt-3">
+                <div class="col-4">
+                  <label for="Password" class="text-bold">Password</label>
+                </div>
+                <div class="col-8">
+                  <!-- <input class="form-control" type="password" placeholder="Enter your Password" id="Password" [(ngModel)]="LoginUserData.Password" name="Password" required #password="ngModel"/> -->
+                  <!-- this is the validation that done by template driven forms -->
+                  <!-- <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <div *ngIf="password.errors?.['required']">
+                      <span class="text-danger">Password is Required</span>
+                    </div>
+                  </div> -->
+                  <input class="form-control" type="password" placeholder="Enter your Password" id="Password" [(ngModel)]="loginData.Password" name="   Password" required/>
+                  <!-- <div *ngIf="LoginUserData.hasError('required','password')"> -->
+                   
+                </div>
+             </div>
+             
+            </form>
+          </div>
+          <div class="card-footer text-muted text-center">
+            <button type="submit" class="btn btn-outline-info" (click)="loginUser()">Login</button>
+          </div>    
+      </div>
+    </div>
